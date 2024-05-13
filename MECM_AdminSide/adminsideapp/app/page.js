@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     <div >
-      <h1>Ayush's App</h1>
+      <h1 className = "text-6xl font-bold underline">Ayush's App</h1>
     </div>
     </>
   );
