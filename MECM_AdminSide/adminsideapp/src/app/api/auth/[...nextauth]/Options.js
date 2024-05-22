@@ -1,5 +1,7 @@
 import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
+import clientPromise from '../../../../../lib/db'
+import { MongoDBAdapter } from '@auth/mongodb-adapter'
 export const options = {
     providers: [
         GoogleProvider({
@@ -7,4 +9,5 @@ export const options = {
             clientSecret: process.env.GOOGLE_SECRET
           }),
     ],
+    adapter: MongoDBAdapter(clientPromise),
 }
