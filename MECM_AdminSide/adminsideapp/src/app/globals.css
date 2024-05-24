@@ -17,17 +17,52 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+svg {
+  height: 48px;
+  
+}
+.activesvg{
+  fill: #000000;
+}
+
+.abc{
+  margin: 1rem ;
+  padding-left: 1rem;
+  padding-top: 1rem;
+
+}
+.def{
+  display:flex;
+  padding:1rem;
+
+}
+.xyz{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.lmn{
+
+  padding-right:1rem;
+  margin:1rem;
+}
+
+input, textarea{
+  @apply border-2 border-gray-300 rounded-md px-1 mb-1;
+}
+input:hover , textarea:hover{
+  @apply border-2 border-blue-900
+}
+label{
+  @apply px-1 mt-1
+}
+.btn-primary {
+  @apply px-1 mt-2 bg-blue-900 text-white px-4 p-2 rounded-lg
 }
