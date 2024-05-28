@@ -10,6 +10,7 @@ function page() {
     const [prdname, setprdname]=useState('');
     const [desc, setdesc]=useState('');
     const [price, setprice]=useState('');
+    const [imgurl , setimgurl] = useState('');
     const params = useParams();
     const router = useRouter()
     const [cancelled, setcancelled] = useState(false);
@@ -19,6 +20,7 @@ function page() {
             setprdname(res.data.prdname);
             setdesc(res.data.desc);
             setprice(res.data.price);
+            setimgurl(res.data.imgurl);
         })
     },[])
    function no(){ 
@@ -35,7 +37,13 @@ function page() {
         <div className="mx-8 my-4">
             <div><span className='font-bold text-m'>Product Name : </span> {prdname} </div>
             <div><span className='font-bold text-m'>Product Description : </span>{desc} </div>
-            <div><span className='font-bold text-m'>Product Price : </span>{price} </div>
+            <div><span className='font-bold text-m'>Product Price : Rs.{price}  </span> </div>
+            <div className=''><span className='font-bold text-m'>Product Image :</span><div className="flex">
+            <img src={imgurl} alt="" className='px-2 text-center flex justify-center items-center w-24 h-24 rounded-lg ' />
+            </div>
+          </div>
+            
+
         </div>
         <div className=" flex justify-around m-8"><button className='bg-blue-900 font-bold text-white rounded-lg p-1 px-4 text-lg' onClick={yes}>Yes</button>
         <button className='bg-red-900 font-bold text-white rounded-lg p-1 px-4 text-lg' onClick={no}>No</button></div>
