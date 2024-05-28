@@ -23,7 +23,6 @@ function page() {
         setdesc(res.data.desc);
         setPrice(res.data.price);
         setimgurl(res.data.imgurl);
-        console.log(prdname , desc , price);
     })
     },[])
     async function createProduct(ev){
