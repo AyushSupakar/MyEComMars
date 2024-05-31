@@ -143,8 +143,11 @@ else{
 
     return(
         <>
-            <form onSubmit={cathandel} className="flex flex-col">
-           <h1 className='m-2 text-lg ctext-blue-900'>Add new Categories</h1>
+        <div className="flex"><h1 className='m-2 text-2xl ctext-blue-900'>Add new Categories</h1></div>
+        
+            
+            <form onSubmit={cathandel} className="flex flex-col text-xl my-1">
+           
             <div className="">
             
                 <label htmlFor="" className='mx-2'>Category Name</label>

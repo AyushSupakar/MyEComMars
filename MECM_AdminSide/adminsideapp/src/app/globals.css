@@ -85,8 +85,25 @@ label{
   @apply px-1 mt-2 text-white px-4 p-2 rounded-lg 
 }
 
+.btn-primary:active {
+  border-radius: 15px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.33);
+	transition: 0.5s all;
+  transform: scale(0.9); 
+  
+
+  @apply px-1 mt-2 text-white px-4 p-2 rounded-lg 
+}
+
 .rlink:hover {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.33);
+	transition: 0.5s all;
+  @apply rounded-lg
+
+ 
+}
+.rlink:active {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
 	transition: 0.5s all;
   @apply rounded-lg
 
@@ -95,17 +112,18 @@ label{
 
 
 table{
-  border-color:  rgb(108, 108, 233);
+  border-color:  #6c6ce9;
   @apply border-2 w-full m-2 my-4 rounded-lg;
 }
 thead{
-  background-color:rgb(229, 229, 254);
+  background-color:#e5e5fe;
 }
 tbody{
 }
 td{}
 .cborder-blue-900{
   border-color:  rgb(108, 108, 233);
+  @apply text-xl
 }
 
 .cbg-blue-900{
