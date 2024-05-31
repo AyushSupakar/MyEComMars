@@ -4,6 +4,7 @@ import MyLayout from '../../../../../components/MyLayout'
 import { useParams } from 'next/navigation'
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 
 function page() {
@@ -28,12 +29,13 @@ function page() {
    }
    function yes(){
     axios.delete('/api/products/'+deleteproductid).then(res=>{
+        Swal.fire('Deleted!', '', 'success')
         router.back();
     }) 
    }
   return (
     <MyLayout>
-        <div className="text-center my-8"><span className='text-blue-900 font-bold text-center text-xl '>Do you really you want to DELETE this product?</span></div>
+        <div className="text-center my-8"><span className='ctext-blue-900 font-bold text-center text-xl '>Do you really you want to DELETE this product?</span></div>
         <div className="mx-8 my-4">
             <div><span className='font-bold text-m'>Product Name : </span> {prdname} </div>
             <div><span className='font-bold text-m'>Product Description : </span>{desc} </div>
@@ -45,8 +47,8 @@ function page() {
             
 
         </div>
-        <div className=" flex justify-around m-8"><button className='bg-blue-900 font-bold text-white rounded-lg p-1 px-4 text-lg' onClick={yes}>Yes</button>
-        <button className='bg-red-900 font-bold text-white rounded-lg p-1 px-4 text-lg' onClick={no}>No</button></div>
+        <div className=" flex justify-around m-8"><button className='btn-primary cbg-blue-900 font-bold text-white rounded-lg p-1 px-4 text-lg' onClick={yes}>Yes</button>
+        <button className='btn-primary cbg-red-900 font-bold text-white rounded-lg p-1 px-4 text-lg' onClick={no}>No</button></div>
     </MyLayout>
   )
 }

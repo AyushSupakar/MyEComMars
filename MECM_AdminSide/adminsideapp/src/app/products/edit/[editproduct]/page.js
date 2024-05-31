@@ -40,7 +40,7 @@ function page() {
       <MyLayout>
   
           <form onSubmit={createProduct} className=" flex flex-col mt-4">
-              <h1 className="px-1 mb-1 text-blue-900 text-lg">Edit Product:</h1>
+              <h1 className="px-1 mb-1 ctext-blue-900 text-lg">Edit Product:</h1>
               <label htmlFor="ep-pn">Product Name: </label>
               <input  type="text" placeholder='product_name' value={prdname} onChange={(ev)=>setPrdname(ev.target.value)} id ="ep-pn"></input>
 
@@ -53,7 +53,7 @@ function page() {
           <label htmlFor="ep-p">Price(INR): </label>
               <input  type="number" placeholder='price' value={price} onChange={(ev)=>setPrice(ev.target.value)}id ="ep-p"></input>
               <div className="flex">
-                <button type='submit' className='btn-primary'>Save</button></div>
+                <button className="btn-primary" type='submit'>Save</button></div>
               
           </form>
           

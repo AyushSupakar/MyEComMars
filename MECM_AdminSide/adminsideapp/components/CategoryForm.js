@@ -75,7 +75,7 @@ const CategoryForm = (props) => {
     return (
     <>
         <form onSubmit={cathandeledit} className="flex flex-col">
-        <h1 className='m-2 text-lg text-blue-900'> Edit Category : {ecatname} </h1>
+        <h1 className='m-2 text-lg ctext-blue-900'> Edit Category : {ecatname} </h1>
             <div className="">
             
                 <label htmlFor="" className='mx-2'>Category Name</label>
@@ -95,7 +95,7 @@ const CategoryForm = (props) => {
             </select>
             </div>
             <div className='flex'>
-                <button className="btn-prim mx-2 px-4 py-1 " type='submit' >Save</button>
+                <button className="btn-primary mx-2 px-4 py-1 " type='submit' >Save</button>
             </div>
 
               </form>
@@ -144,7 +144,7 @@ else{
     return(
         <>
             <form onSubmit={cathandel} className="flex flex-col">
-           <h1 className='m-2 text-lg text-blue-900'>Add new Categories</h1>
+           <h1 className='m-2 text-lg ctext-blue-900'>Add new Categories</h1>
             <div className="">
             
                 <label htmlFor="" className='mx-2'>Category Name</label>
@@ -164,7 +164,7 @@ else{
             </select>
             </div>
             <div className='flex'>
-                <button className="btn-prim mx-2 px-4 py-1 " type='submit' >Save</button>
+                <button className="btn-primary mx-2 px-4 py-1 " type='submit' >Save</button>
             </div>
 
               </form>
