@@ -39,7 +39,7 @@ function page() {
             <div><span className='font-bold text-m'>Product Description : </span>{desc} </div>
             <div><span className='font-bold text-m'>Product Price : Rs.{price}  </span> </div>
             <div className=''><span className='font-bold text-m'>Product Image :</span><div className="flex">
-            <img src={imgurl} alt="" className='px-2 text-center flex justify-center items-center w-24 h-24 rounded-lg ' />
+            <img src={imgurl} alt="" className=' text-center flex justify-center items-center h-24 rounded-lg ' />
             </div>
           </div>
             
