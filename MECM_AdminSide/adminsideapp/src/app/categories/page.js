@@ -91,7 +91,7 @@ function page() {
         <h1 className='m-2 mt-4 text-2xl ctext-blue-900 pt-2'>Saved Categories</h1>
 
               <div className="flex">
-          <table>
+          <table className="border-2 rounded-lg">
             <thead>
               <tr>
                 <td className="text-center border-2 cborder-blue-900 " >Categories</td>

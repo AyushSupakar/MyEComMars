@@ -73,7 +73,7 @@ label{
 	transition: 1s all;
   
 
-  @apply px-1 mt-2 text-white px-4 p-2 rounded-lg
+  @apply px-1 mt-2 text-white px-4 p-2 rounded-2xl
 }
 .btn-primary:hover {
   border-radius: 15px;
@@ -106,6 +106,13 @@ label{
 	transition: 0.5s all;
   transition: 0.5s all;
   transform: scale(1.1); 
+ 
+}
+.plink:active {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.33);
+	transition: 0.5s all;
+  transition: 0.5s all;
+  transform: scale(0.95); 
  
 }
 .rlink:active {
@@ -149,8 +156,16 @@ td{}
   border-color:  rgb(108, 108, 233);
   @apply text-xl
 }
-.dborder-blue-900{
+.eborder-blue-900{
   border-color:  rgb(108, 108, 233);
+  @apply text-xl
+}
+.dborder-blue-900{
+  
+  @apply text-base border-gray-300;
+}
+.dborder-blue-900:hover{
+  border-color: rgb(108, 108, 233);
   @apply text-base;
 }
 
@@ -159,6 +174,9 @@ td{}
 }
 .cbg-red-900{
   background-color: #e6445f;
+}
+.cbg-green-900{
+  background-color: #bc69ff;
 }
 .cbg-white{
   background-color: rgb(255, 255, 255);

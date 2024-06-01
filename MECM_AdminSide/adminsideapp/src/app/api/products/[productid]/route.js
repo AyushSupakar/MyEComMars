@@ -13,10 +13,10 @@ export async function GET(req, context){
 
 export async function PUT(req, context){
     const data = await req.json();
-    const {prdname, desc, price, imgurl} = data;
+    const {prdname, desc, price, imgurl, parentcatname} = data;
     const {params} = context;
     const filter = {"_id" : params.productid};
-    const update = {"prdname" : prdname , "desc" : desc , "price" : price, "imgurl" : imgurl,};
+    const update = {"prdname" : prdname , "desc" : desc , "price" : price, "imgurl" : imgurl, "parentcatname" : parentcatname};
     const updatedproduct = await Product.findByIdAndUpdate(filter, update, {new : true});
     return NextResponse.json(updatedproduct);
 }
