@@ -9,10 +9,12 @@ export default function page() {
     return (
    <MyLayout>
     <div className="flex flex-col justify-center items-center">
-      <div className=""><Image src={session?.user?.image} alt="" width={1000} height={1000} className="rounded-full w-48 h-48"/></div>
-        <div className="font-bold text-black text-lg">Name : {session?.user?.name}</div>
-        <div className="font-bold text-black text-lg">E-Mail : {session?.user?.email}</div>
-        <div className="font-bold text-black text-lg"> Role : EComMars  Admin </div>
+      <div className="border-8 cborder-blue-900 rounded-full p-2 shadow-xl "><Image src={session?.user?.image} alt="" width={1000} height={1000} className="rounded-full w-36 h-36"/></div>
+      <div className="flex-col my-8"> 
+        <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-e-lg shadow-xl rlink cursor-pointer">Name : {session?.user?.name}</div>
+        <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-e-lg shadow-xl rlink cursor-pointer">E-Mail : {session?.user?.email}</div>
+        <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-e-lg shadow-xl rlink cursor-pointer"> Role : EComMars  Admin </div></div>
+       
     </div>
    </MyLayout>
   )

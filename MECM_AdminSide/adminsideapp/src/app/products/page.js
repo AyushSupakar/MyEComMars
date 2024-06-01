@@ -15,7 +15,9 @@ export default function page() {
   }
   return (
     <MyLayout>
-        <Link href="/products/new" className='btn-primary cbg-blue-900 text-white p-2 px-4 rounded-lg mx-2 my-2 text-xl'>Add New Products</Link>
+      <div className="flex"><div className=' btn-primary clink cbg-blue-900 text-white p-2 px-4 rounded-lg mx-2 my-2 text-xl'><Link href="/products/new" >Add New Products</Link></div></div>
+      
+        
 
         <div className="flex mt-4">
           <table>

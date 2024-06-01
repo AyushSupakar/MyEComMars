@@ -88,7 +88,7 @@ function page() {
         <CategoryForm mode={mode} editcat={editcat} allcats={allcats} getallcats={getallcats} router={router} setposted={setposted} key={editcat._id} ecatname={ecatname} eparentcatname={eparentcatname} esetCat={esetCat} esetparentCat={esetparentCat} setmode={setmode}/>
 
 
-        <h1 className='m-2 mt-4 text-2xl ctext-blue-900 pt-2' id="top">Saved Categories</h1>
+        <h1 className='m-2 mt-4 text-2xl ctext-blue-900 pt-2'>Saved Categories</h1>
 
               <div className="flex">
           <table>

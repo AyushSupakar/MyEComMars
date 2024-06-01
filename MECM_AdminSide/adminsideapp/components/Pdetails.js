@@ -14,7 +14,7 @@ export default function Pdetails() {
   return (
     <div className="flex justify-end">
       <Link href= "/profile" className=' flex space-x-1 items-center'>
-        <div className="flex"><Image src={session?.user?.image} width={500} height={500} alt="" className="rounded-full w-16 h-16 border-2 cborder-blue-900 p-1 " /></div>
+        <div className="flex"><Image src={session?.user?.image} width={500} height={500} alt="" className="plink" /></div>
       </Link>
         
       

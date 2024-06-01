@@ -4,10 +4,12 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import Nav from "./Nav";
 import Pdetails from "./Pdetails"
 import mylogo from "./mylogo.gif"
+import { useRouter } from 'next/navigation';
 
 
 export default function MyLayout({children}) {
     const { data: session } = useSession();
+    const router = useRouter();
     if(session){
       return(
         <div className=" flex min-h-screen cbg-blue-900 p-1 ">
@@ -17,6 +19,9 @@ export default function MyLayout({children}) {
       )
     }
     else{
+
+      router.push('/');
+
       return(<>
         <div className="cbg-blue-900 w-screen h-screen flex items-center justify-around">
 

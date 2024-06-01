@@ -55,7 +55,7 @@ svg {
 }
 
 input, textarea, select{
-  @apply border-2 border-gray-300 rounded-md px-1 mb-1;
+  @apply border-2 border-gray-300 rounded-md px-1 mb-1 text-gray-600;
 }
 input:hover , textarea:hover, select:hover{
   border-color:  rgb(108, 108, 233);
@@ -94,6 +94,30 @@ label{
 
   @apply px-1 mt-2 text-white px-4 p-2 rounded-lg 
 }
+.rlink{
+  @apply text-xl
+}
+
+.plink{
+  @apply rounded-full w-16 h-16 border-4 cborder-blue-900 p-1
+}
+.plink:hover {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.33);
+	transition: 0.5s all;
+  transition: 0.5s all;
+  transform: scale(1.1); 
+ 
+}
+.rlink:active {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+	transition: 0.5s all;
+  transition: 0.5s all;
+  transform: scale(0.9); 
+
+ 
+}
+
+
 
 .rlink:hover {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.33);
@@ -125,6 +149,10 @@ td{}
   border-color:  rgb(108, 108, 233);
   @apply text-xl
 }
+.dborder-blue-900{
+  border-color:  rgb(108, 108, 233);
+  @apply text-base;
+}
 
 .cbg-blue-900{
   background-color: rgb(108, 108, 233);
@@ -140,5 +168,13 @@ td{}
 }
 .btn-prim{
   @apply bg-blue-900 text-white rounded-lg px-2;
+}
+.clink:hover{
+  transition: 0.5s all;
+  transform: scale(1.1); 
+}
+.clink:active{
+  transition: 0.5s all;
+  transform: scale(0.9); 
 }
 

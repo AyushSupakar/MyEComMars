@@ -58,8 +58,8 @@ export default function page() {
   return (
     <MyLayout>
 
-        <form onSubmit={createProduct} className=" flex flex-col mt-4">
-            <h1 className="px-1 mb-1 ctext-blue-900 text-lg">New Product</h1>
+            <h1 className="px-1 mb-1 ctext-blue-900 text-xl">New Product</h1>
+        <form onSubmit={createProduct} className=" flex flex-col mt-4 text-lg">
             <label htmlFor="np-pn">Product Name: </label>
             <input  type="text" placeholder='product_name' value={prdname} onChange={(ev)=>setPrdname(ev.target.value) } id="np-pn"></input>
 
