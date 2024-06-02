@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import ProductImage from '../../../../../components/ProductImage';
 import Swal from 'sweetalert2';
 
-function page() {
+function Page() {
     const [desc, setdesc] = useState('');
     const [prdname , setPrdname] = useState('');
     const [price , setPrice] = useState('');
@@ -91,4 +91,4 @@ function page() {
     )
 }
 
-export default page
+export default Page

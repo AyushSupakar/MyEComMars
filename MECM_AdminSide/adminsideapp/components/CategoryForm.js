@@ -7,6 +7,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import Swal from 'sweetalert2';
 
 const CategoryForm = (props) => {
+    const [catname, setCat] = useState('');
+    const [parentcatname, setparentCat] = useState('No Parent');
+    //const [touchstate, settouchstate] = useState(false);
+    //const [x, setx] = useState('');
+   // const [oldprop, setoldprop] = useState(props);
+   // const ref = useRef();
     
   
   if(props.mode=='edit'){ 
@@ -104,12 +110,7 @@ const CategoryForm = (props) => {
     
   )}
 else{
-    const [catname, setCat] = useState('');
-    const [parentcatname, setparentCat] = useState('No Parent');
-    const [touchstate, settouchstate] = useState(false);
-    const [x, setx] = useState('');
-    const [oldprop, setoldprop] = useState(props);
-    const ref = useRef();
+
 
     function setParent(ev){
         setparentCat(ev.target?.value);

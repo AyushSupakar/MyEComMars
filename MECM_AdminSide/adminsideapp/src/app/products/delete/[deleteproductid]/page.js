@@ -7,10 +7,10 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 
 
-function page() {
-    const [prdname, setprdname]=useState('');
-    const [desc, setdesc]=useState('');
-    const [price, setprice]=useState('');
+function Page() {
+    const [prdname, setprdname]= useState('');
+    const [desc, setdesc]= useState('');
+    const [price, setprice]= useState('');
     const [imgurl , setimgurl] = useState('');
     const params = useParams();
     const router = useRouter()
@@ -53,4 +53,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

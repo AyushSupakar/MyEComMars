@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import Nav from "./Nav";
 import Pdetails from "./Pdetails"
@@ -8,9 +8,24 @@ import { useRouter } from 'next/navigation';
 
 
 export default function MyLayout({children}) {
+  const [touched, settouched] = useState(true);
+ 
     const { data: session } = useSession();
-    const router = useRouter();
-    if(session){
+    const router = useRouter(); 
+
+    useEffect(()=>{
+      console.log('render fininshed');
+      if(!session){
+        router.push('/'); 
+        router.refresh();
+      }
+       
+       // console.log(session);
+      },[])
+
+    if(session){ 
+      
+      
       return(
         <div className=" flex min-h-screen cbg-blue-900 p-1 ">
         <Nav/>
@@ -19,8 +34,21 @@ export default function MyLayout({children}) {
       )
     }
     else{
+      if(!session){
+        router.push('');
+        router.push('/');
+        
+      }
+     
+   
 
-      router.push('/');
+      async function signinReload(){
+        //console.log('signin in');
+        await signIn('google');
+       // console.log('signed in, reloading');
+        router.push('/');
+       // console.log('reloaded');
+      }
 
       return(<>
         <div className="cbg-blue-900 w-screen h-screen flex items-center justify-around">
@@ -35,7 +63,7 @@ export default function MyLayout({children}) {
 
           </div>
          
-         <div className="text-center "><button className="btn-primary bg-white text-black font-bold p-2 rounded-lg" onClick={()=>signIn('google')}>LogIn with Google</button></div>
+         <div className="text-center "><button className="btn-primary bg-white text-black font-bold p-2 rounded-lg" onClick={(e)=>{signinReload()}}>LogIn with Google</button></div>
          </div>
 
   

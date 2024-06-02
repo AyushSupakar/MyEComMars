@@ -10,6 +10,7 @@ export const options = {
             clientSecret: process.env.GOOGLE_SECRET
           }),
     ],
+    secret: process.env.NEXT_PUBLIC_SECRET,
     adapter: MongoDBAdapter(clientPromise),
     callbacks:{
         session: ({session,user})=>{
@@ -17,7 +18,7 @@ export const options = {
                 return session;
             }
             else{
-                return false;
+                return session;
             }
         },
     }

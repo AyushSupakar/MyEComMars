@@ -3,7 +3,7 @@ import React from 'react'
 import MyLayout from '../../../../../components/MyLayout'
 import { useParams } from 'next/navigation'
 
-function page() {
+function Page() {
     const params = useParams();
     const catid = params.catid;
   return (
@@ -14,4 +14,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

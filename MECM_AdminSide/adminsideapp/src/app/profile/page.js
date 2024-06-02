@@ -4,7 +4,7 @@ import MyLayout from '../../../components/MyLayout'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 
-export default function page() {
+export default function Page() {
   const{data : session} = useSession();
     return (
    <MyLayout>
