@@ -1,6 +1,9 @@
 import GoogleProvider from 'next-auth/providers/google';
 import { MongoDBAdapter } from "@auth/mongodb-adapter"
 import clientPromise from '../../../../../lib/db';
+
+
+
 export const options = {
     providers: [
         GoogleProvider({
@@ -10,4 +13,8 @@ export const options = {
     ],
     adapter: MongoDBAdapter(clientPromise),
        
+}
+
+export function auth(...args) {
+  return getServerSession(...args,options)
 }
