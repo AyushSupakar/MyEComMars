@@ -7,7 +7,8 @@ const nextConfig = {
             {protocol : "https",
                 hostname : "myecommarsproject.s3.amazonaws.com"}
 
-        ]
+        ],
+        minimumCacheTTL: 600,
     }
 };
 

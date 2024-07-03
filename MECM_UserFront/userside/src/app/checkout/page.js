@@ -76,7 +76,7 @@ function fetchcartdetails(){
     <NewLayout>
        <div className="flex justify-center items-center p-4">
 
-        <div className="flex flex-col shdw p-4 m-8 w-1/3">
+        <div className="infinity">
 
         <h1 className="px-1 mb-1 ctext-blue-900 font-bold text-2xl">Checkout</h1>
         <form onSubmit={createProduct} className=" flex flex-col mt-4 text-lg">
@@ -93,10 +93,10 @@ function fetchcartdetails(){
             <option id='us' value={"usa"} onChange={(ev)=>{setparentCat(ev.target?.value)}} selected>USA</option>
             </select>
             
-            <div className="flex my-1">
-                <div className="p-1 border-2 border-gray-200 rounded-lg mx-4 "><span>{(country=="ind")?('+91'):('+1')}</span></div>
+            <div className="smile">
+                <div className="again p-1 border-2 border-gray-200 rounded-lg mx-4 "><span>{(country=="ind")?('+91'):('+1')}</span></div>
 
-                <div className="flex"><input className='m-0'  id="np-jh" type="number" placeholder='phone no.' value={userphno} onChange={(ev)=>setuserphno(ev.target.value) }>
+                <div className=""><input className='m-0 sittubhai'  id="np-jh" type="number" placeholder='phone no.' value={userphno} onChange={(ev)=>setuserphno(ev.target.value) }>
             </input></div>
                 
             </div>
@@ -106,11 +106,12 @@ function fetchcartdetails(){
 
             <label htmlFor="np-j">Pin Code: </label>
             <input id="np-j"  type="number" value={useraddresspin} onChange={(ev)=>setuseraddresspin(ev.target.value) }></input>
-        <div className="flex my-4 p-2 justify-between items-center"><label className='m-0 px-4' htmlFor="np-p">Total Price(INR): </label>
-        <span className='font-bold text-xl px-4'>Rs. {totprice}/-</span></div>
+            <label className='m-0 px-4' htmlFor="np-p">Total Price(INR): </label>
+        <div className="strong">
+        <span className='font-bold text-center text-justify text-xl px-4'>Rs. {totprice}/-</span></div>
             
 
-            <div className="flex justify-between">
+            <div className="see">
                   <div className="flex  items-center justify-between">
                             <Link href={"/cart"} className='btn-mprimary py-1 px-2'>
                                   <div className="flex items-center justify-between px-2 py-1 mx-1 font-bold text-center">

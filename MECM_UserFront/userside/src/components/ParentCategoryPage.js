@@ -34,7 +34,7 @@ export default function ParentCategoryPage(props) {
             {arr.map(each=>{return(<Link key={each._id} className='m-4 p-4' href={"/category/"+each._id} ><div className=" flex shdw m-2 p-4">
             <div className="flex flex-col  justify-center items-center text-center 
             font-sans text-lg"><span>{each.catname}</span>
-            <div className="flex "><img className='h-96 w-64' src={each.imgurl} alt="" /></div> </div>
+            <div className="flex "><img className='catimq' src={each.imgurl} alt="" /></div> </div>
             <div className="flex items-center justify-evenly">
             </div>
 

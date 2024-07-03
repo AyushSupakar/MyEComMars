@@ -84,7 +84,7 @@ function fetchcartdetails(){
   else{
     return (
     <NewLayout>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex  flex-col justify-center items-center">
         {parr.map((each, indx) => {
           let qty=0;
           let smallest=indx;
@@ -104,40 +104,42 @@ function fetchcartdetails(){
           }
           
           else {return(
-          <div key={each._id} className='m-4 w-4/6 p-4'>
-            <div className="flex shdw m-2 p-4">
-              <div className="flex w-1/4">
-                <img className='h-48 w-32' src={each.imgurl} alt="" />
+          <div key={each._id} className='m-4 w-11/12 p-4'>
+            <div className="fish">
+              <div className="truth">
+                <img className='w-44 h-68' src={each.imgurl} alt="" />
               </div>
-              <div className="w-3/4 flex flex-col justify-around font-sans text-lg">
+              <div className="heart">
                 <div className="flex">
-                  <span className='font-bold text-xl'>{each.prdname}</span>
+                  <span className='stay'>{each.prdname}</span>
                 </div>
                
-                <div className="flex justify-between items-center">
+                <div className="cigarette">
 
                 <div className="flex items-center justify-between px-2 font-bold"><span className='font-bold text-xl'>
-                    <span className='font-bold text-lg'>Price: Rs.</span>{each.price}/-
+                    <span className='badder'>Price: Rs.</span>{each.price}/-
                   </span></div>
 
 
-                  <div className="flex justify-between items-center">
+                  <div className="blinding">
 
                   <div className="flex items-center font-bold mx-2"><span className='font-bold text-xl'>
-                  <span className='font-bold text-lg'>Qty: </span></span></div>
+                  <span className='badder'>Qty: </span></span></div>
 
+                    <div className="flex">
                     <div className="flex mx-2"><button className='btn-nprimary mx-2' onClick={()=>{addtocart(each._id)}}> 
                                     <div className="flex items-center font-bold px-1.5 "><span className='font-bold text-xl'>+</span></div>
                                 </button></div>
 
                                 <div className="flex items-center font-bold mx-2"><span className='font-bold text-xl'>
-                    <span className='font-bold text-lg'></span>{qty}</span></div>
+                    <span className='badder'></span>{qty}</span></div>
 
 
 
                     <div className="flex mx-2 "><button className='btn-mprimary ' onClick={()=>{removefromcart(each._id)}}> 
                                     <div className="flex items-center font-bold px-2"><span className='font-bold text-xl'>-</span></div>
                                 </button></div>
+                    </div>
 
                   </div>
 
@@ -177,7 +179,7 @@ function fetchcartdetails(){
           </div>
         )}})}
 
-        <div className='m-4 w-4/6 p-4'>
+        <div className='m-4 w-11/12 p-4'>
             <div className="flex justify-between  items-center shdw m-2 p-4">
 
             <div className="flex ">

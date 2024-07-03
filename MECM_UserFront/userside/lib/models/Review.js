@@ -6,7 +6,7 @@ const ReviewSchema = new Schema({
     userimg : {type:String , required: true},
     username : {type:String , required: true},
     preview : {type:String, required: true},
-    pstars :{type:Number, required: true},
+    pstars :{type:Number, required: true, default:1},
 })
 
 export const Review = models.Review || model('Review', ReviewSchema);
