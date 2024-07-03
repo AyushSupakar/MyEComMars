@@ -36,7 +36,7 @@ function Page() {
     useEffect(()=>{
       getallcats();
       if(mode=="edit"){
-        console.log("edit mode");
+        
       }
 
     },[])
@@ -91,7 +91,7 @@ function Page() {
 
         
 
-              <div className="flex">
+              <div className="flex h-60 overflow-auto">
           <table className="border-2 rounded-lg">
             <thead>
               <tr>

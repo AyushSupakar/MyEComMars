@@ -14,7 +14,7 @@ export async function PUT(req, context){
         "imgurl" : data.eimgurl
     }
     const updatedcat = await Category.findOneAndUpdate(filter, newcat);
-    console.log(updatedcat)
+    
 
     return NextResponse.json(updatedcat);
 } 

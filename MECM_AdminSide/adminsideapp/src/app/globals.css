@@ -72,6 +72,9 @@ svg {
   @apply p-2;
  
 }
+.jazba{
+  @apply m-2 w-full px-4
+}
 .lmn{
 
   padding-right:1rem;
@@ -245,4 +248,209 @@ td{ border-collapse:separate;}
   transition: 0.5s all;
   transform: scale(0.9); 
 }
+.sunna{
+  @apply flex min-h-screen cbg-blue-900 p-8 
+}
+.hmq{
+  @apply hidden
+}
+.newhid{
 
+}
+.widthhh{
+
+}
+.meow{
+  @apply flex items-center justify-center
+}
+.logosz{
+  @apply size-28
+}
+.medown{
+  @apply flex justify-between items-center font-sans text-lg 
+}
+.Xnewhidden{
+  
+}
+.nHidden{
+  @apply hidden font-bold text-xl
+}
+.catmq{
+  @apply lg:text-2xl md:text-xl sm:text-lg font-bold p-1
+}
+.onlywide{
+  @apply w-1/3
+}
+.onlywide2{
+  @apply w-1/6
+}
+.lola{
+  @apply flex;
+}
+.cola{
+  
+}
+.cakshar{
+  @apply text-lg
+}
+.flipflop{
+  @apply flex shdw m-2 p-4
+}
+.algo{
+  @apply w-4/6 m-4 p-4
+}
+.duniya{
+  @apply cbg-blue-900 w-screen h-screen flex items-center justify-around
+}
+@media screen and (min-width: 1080px){
+  .widthhh{
+      @apply w-1/4
+  }
+  
+  
+}
+
+@media screen and (max-width: 1370px){
+  .algo{
+    @apply w-full m-2 p-1
+  }
+  .flipflop{
+    @apply flex flex-col shdw m-2 p-4
+  }
+  .cakshar{
+    @apply text-sm
+  }
+  .lola{
+    @apply flex flex-col items-center;
+  }
+  .cola{
+    @apply text-center
+  }
+  .onlywide2{
+    @apply w-full justify-start px-2
+  }
+  .Xnewhidden{
+    @apply hidden
+  }
+  .onlywide{
+    @apply w-full justify-start px-2 text-sm
+  }
+  .medown{
+    @apply flex flex-col  items-start font-sans text-lg 
+  }
+  .nHidden{
+    @apply flex mx-4 font-bold text-lg
+  }
+  
+}
+.allom{
+  
+}
+.gobble{
+  @apply size-36
+}
+.night{
+  @apply font-bold ctext-blue-900 text-3xl font-sans
+}
+.aallo{
+  @apply bg-white rounded-2xl shadow-xl m-4 w-96 h-64 flex flex-col items-center justify-center
+}
+@media screen and (min-width: 900px) and (max-width: 1080px){
+  .allom{
+    @apply hidden
+  }
+  .duniya{
+    @apply cbg-blue-900 w-screen min-h-screen flex flex-col items-center justify-around
+  }
+  .medown{
+    @apply flex flex-col  items-start font-sans text-lg 
+  }
+  .logosz{
+    @apply size-20
+  }
+  .sunna{
+    @apply flex flex-col min-h-screen items-center cbg-blue-900 p-2 
+  }
+.xyz{
+  display: flex;
+  flex-direction: row;
+
+  @apply p-2 justify-center;
+ 
+}
+.meow{
+  @apply flex items-center justify-center
+}
+.jazba{
+ 
+  
+}
+.abc{
+
+  @apply my-2;
+
+
+}
+}
+@media screen and (max-width: 899px){
+  .aallo{
+    @apply bg-white rounded-2xl shadow-xl m-2 w-72 h-56 flex flex-col items-center justify-center
+  }
+  .night{
+    @apply font-bold ctext-blue-900 text-xl font-sans
+  }
+  .gobble{
+    @apply size-20
+  }
+  .allom{
+    @apply hidden
+  }
+  .duniya{
+    @apply cbg-blue-900 w-screen min-h-screen flex flex-col items-center justify-around
+  }
+  .bs{
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.33);
+    border-collapse:separate;
+    border-radius:6px;
+    @apply  text-base mx-1 my-2 px-1 py-1 rounded-xl;
+  }
+  .cborder-blue-900{
+    border-color:  rgb(108, 108, 233);
+    @apply text-lg
+  }
+  .meow{
+    @apply flex items-center justify-between px-4
+  }
+  .logosz{
+    @apply size-16
+  }
+  .rlink{
+    @apply text-lg px-4 py-1;
+  }
+  .sunna{
+    @apply flex flex-col min-h-screen items-center cbg-blue-900 p-2 
+  }
+.xyz{
+  display: flex;
+  flex-direction: column;
+
+  @apply p-2 items-center;
+ 
+}
+.jazba{
+ 
+  
+}
+.abc{
+
+  @apply my-2;
+
+
+}
+.hmq{
+  @apply flex
+}
+.newhid{
+  @apply hidden
+}
+}

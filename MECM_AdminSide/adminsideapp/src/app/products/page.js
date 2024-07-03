@@ -15,15 +15,14 @@ export default function Page() {
   },[]);
    async function Delete(pname){
     //await axios.delete('api/products', {pid});
-    console.log("Deleting : " + pname);
   }
   return (
     <MyLayout>
-      <div className="flex"><div className=' btn-primary clink cbg-blue-900 text-white p-2 py-1 px-4 rounded-lg mx-2 my-2 text-xl'><Link href="/products/new" >Add New Products</Link></div></div>
+      <div className="flex "><div className=' btn-primary clink cbg-blue-900 text-white p-2 py-1 px-4 rounded-lg mx-2 my-2 text-xl'><Link href="/products/new" >Add New Products</Link></div></div>
       
         
 
-        <div className="flex mt-4">
+        <div className="flex mt-4 h-96 overflow-auto">
           <table>
             <thead>
               <tr>

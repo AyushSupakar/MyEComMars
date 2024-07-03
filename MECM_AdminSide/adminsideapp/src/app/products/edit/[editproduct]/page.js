@@ -21,12 +21,11 @@ function Page() {
     const productid= params.editproduct;
     function getallcats(){
       axios.get('/api/categories').then(res=>{
-          console.log(res.data);
+         
           setallcats(res.data);
       })
   }
-    useEffect(()=>{console.log("params = "+ params.editproduct)
-    console.log("pathname = "+ pathName);
+    useEffect(()=>{
     getallcats();
     axios.get('/api/products/'+productid).then(res=>{
         setPrdname(res.data.prdname);
@@ -38,15 +37,15 @@ function Page() {
     },[])
     function setParent(ev){
       setparentCat(ev.target?.value);
-      console.log(ev.target.value);
+      
   }
   
     async function createProduct(ev){
-      console.log("form submitted");
+      
       ev.preventDefault();
       const data = {prdname, desc, price, imgurl, parentcatname};
       const updatedproduct = await axios.put(('/api/products/'+productid),data);
-      console.log(updatedproduct);
+      
       Swal.fire({
         title: "Changes Saved!", 
         text :"The product: '"+(prdname)+ "' has been Updated Successfully!",
@@ -68,7 +67,7 @@ function Page() {
               <label htmlFor="np-pn">Product Category: </label>
             <select name="" id="" className='w-content p-1' onChange={setParent} value={parentcatname}> 
             <option id='nopar' value={"No Parent"} onChange={(ev)=>{setparentCat(ev.target?.value)}} selected>No Parent</option>
-            {console.log(allcats?.length)}
+            
             {allcats.length>0 && allcats.map(eachcat=>{
                 return (<option key={eachcat._id} value={eachcat.catname}>{eachcat.catname}</option>)
             })}
@@ -81,7 +80,7 @@ function Page() {
               <label htmlFor="ep-d">Description: </label>
           <textarea name="" id="ep-d"   placeholder='describe the product' value={desc} onChange={(ev)=>setdesc(ev.target.value)}/>
           <label htmlFor="ep-p">Price(INR): </label>
-              <input  type="number" placeholder='price' value={price} onChange={(ev)=>setPrice(ev.target.value)}id ="ep-p"></input>
+              <input  type="number" className="appearance-none" placeholder='price' value={price} onChange={(ev)=>setPrice(ev.target.value)}id ="ep-p"></input>
               <div className="flex">
                 <button className="btn-primary" type='submit'>Save</button></div>
               

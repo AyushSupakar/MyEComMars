@@ -1,7 +1,6 @@
 "use client"
 
 import axios from 'axios';
-import { Router } from 'next/router';
 import React, { useEffect, useRef, useState } from 'react';
 import Swal from 'sweetalert2';
 import ProductImage from './ProductImage';
@@ -23,7 +22,7 @@ const CategoryForm = (props) => {
     function setparentcategory(ev){
         //settouchstate(true);
 
-        console.log(ev.target.value);
+        
         esetparentCat(ev.target?.value);
 
     }
@@ -31,11 +30,11 @@ const CategoryForm = (props) => {
     async function cathandeledit(ev){
         ev.preventDefault();
         const data = {ecatname, eparentcatname, eimgurl};
-        console.log(eparentcatname);
+        
 
-        console.log(data);
+        
         const res =  await axios.put(('/api/categories/'+props.editcat._id), data);
-        console.log(res.data);
+        
         props.getallcats();
         esetCat('');
         esetimgurl('')  
@@ -90,7 +89,7 @@ else{
 
     function setParent(ev){
         setparentCat(ev.target?.value);
-        console.log(ev.target.value);
+        
     }
     
     function setcategory(ev){
@@ -101,9 +100,9 @@ else{
         ev.preventDefault();
         const data = {catname, parentcatname, imgurl};
         
-        console.log(data);
+        
         const res =  await axios.post('/api/categories', data);
-        console.log(res.data);
+        
         props.getallcats();
   
         props.setposted(true);
@@ -128,7 +127,8 @@ else{
             <div className="">
             
                 <label htmlFor="" className='mx-2'>Category Name</label>
-                <input type="text" placeholder='name of category' className='mx-2' value={catname} onChange={setcategory}/> 
+                <div className="flex w-full"><input type="text" placeholder='name of category' className='mx-2' value={catname} onChange={setcategory}/> </div>
+                
             </div>
             <div className="">
              <label htmlFor="" className='mx-2'>Parent Category</label>
@@ -144,12 +144,13 @@ else{
             </select>
             </div>
 
+            <div className="flex m-4 items-center">
             <div className="mx-2"> <label htmlFor="np-i">Category Image: </label>
-              <ProductImage imgurl={imgurl} setimgurl={setimgurl} />
-</div>
+              <ProductImage imgurl={imgurl} setimgurl={setimgurl} /></div>
 
-            <div className='flex'>
+            <div className='flex h-16'>
                 <button className="btn-primary mx-2 px-4 py-1 " type='submit' >Save</button>
+            </div>
             </div>
 
               </form>

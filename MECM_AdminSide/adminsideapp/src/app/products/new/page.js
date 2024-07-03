@@ -19,7 +19,7 @@ export default function Page() {
 
     function getallcats(){
       axios.get('/api/categories').then(res=>{
-          console.log(res.data);
+          
           setallcats(res.data);
       })
   }
@@ -29,7 +29,7 @@ export default function Page() {
     },[])
     function setParent(ev){
       setparentCat(ev.target?.value);
-      console.log(ev.target.value);
+      
   }
   
 
@@ -37,11 +37,11 @@ export default function Page() {
 
   const router = useRouter();
   async function createProduct(ev){
-    console.log("form submitted");
+    
     ev.preventDefault();
     const data = {prdname, desc, price, imgurl, parentcatname};
     await axios.post('/api/products', data);
-    console.log(prdname, desc, price, imgurl, parentcatname);
+    
      setredir(true);
      Swal.fire({
       title: "Added!", 
@@ -67,7 +67,7 @@ export default function Page() {
             <label htmlFor="np-pn">Product Category: </label>
             <select name="" id="" className='w-content p-1' onChange={setParent} value={parentcatname}> 
             <option id='nopar' value={"No Parent"} onChange={(ev)=>{setparentCat(ev.target?.value)}} selected>No Parent</option>
-            {console.log(allcats?.length)}
+            
             {allcats.length>0 && allcats.map(eachcat=>{
                 return (<option key={eachcat._id} value={eachcat.catname}>{eachcat.catname}</option>)
             })}

@@ -23,23 +23,23 @@ export default function Page() {
 
       </div></div>  
 
-      <div className='w-4/6 m-4 p-4' >
+      <div className='algo' >
                 <div className=" flex flex-col shdw m-2 p-4">
                   <div className="flex"><span className='font-bold text-xl py-2'>Costumer Details:</span></div>
 
-                  <div className="flex"><div className="flex mx-6 border-8 cborder-blue-900  p-2 shadow-xl ">
+                  <div className="lola"><div className="flex mx-6 border-8 cborder-blue-900  p-2 shadow-xl ">
                     <img className=' w-36 h-36' src={order?.userimg} alt="" />
                   </div>
                   
                   <div className="w-3/4 flex  flex-col  justify-around 
                   font-sans text-lg">
                     
-                    <div className="flex ">
-                    <span className='font-bold text-lg text-gray-600'>Name: </span> <span className='font-bold text-lg'>{order?.username}</span>
+                    <div className="flex cola">
+                    <span className='font-bold cakshar text-gray-600'>Name: </span> <span className='font-bold cakshar'>{order?.username}</span>
                     </div>
 
-                    <div className="flex ">
-                    <span className='font-bold text-lg text-gray-600'>Registered E-Mail: </span> <span className='font-bold text-lg'>{order?.registeredemail}</span>
+                    <div className="flex cola ">
+                    <span className='font-bold cakshar text-gray-600'>E-Mail: </span> <span className='font-bold cakshar'>{order?.registeredemail}</span>
                     </div>
 
                   </div></div>
@@ -53,27 +53,27 @@ export default function Page() {
               </div>
 
 
-              <div className=' items-center m-4 w-4/6 p-4'>
+              <div className=' items-center algo'>
             <div className="flex flex-col justify-between shdw  m-2 p-4 ">
 
               
 
             <span className='font-bold text-xl py-2'>Address Details:</span>
             
-            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 text-lg' htmlFor="ds">Address: </label>
-            <span className='text-lg' >{order?.userAddress}</span></div>
+            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 cakshar' htmlFor="ds">Address: </label>
+            <span className='cakshar' >{order?.userAddress}</span></div>
 
-            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 text-lg' htmlFor="ds">Pin Code: </label>
-            <span className='text-lg'>{order?.userAddressPin}</span></div>
+            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 cakshar' htmlFor="ds">Pin Code: </label>
+            <span className='cakshar'>{order?.userAddressPin}</span></div>
 
-            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 text-lg' htmlFor="ds">Country: </label>
-            <span className='text-lg'>{((order?.userCountry)=="ind")?("India"):("USA")}</span></div>
+            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 cakshar' htmlFor="ds">Country: </label>
+            <span className='cakshar'>{((order?.userCountry)=="ind")?("India"):("USA")}</span></div>
 
-            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 text-lg' htmlFor="ds">Contact No.: </label>
-            <span className='text-lg'>{order?.userPhoneNo}</span></div>
+            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 cakshar' htmlFor="ds">Contact No.: </label>
+            <span className='cakshar'>{order?.userPhoneNo}</span></div>
 
-            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 text-lg' htmlFor="ds">Contact E-Mail: </label>
-            <span className='text-lg'>{order?.useremail}</span></div>
+            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 cakshar' htmlFor="ds">Contact E-Mail: </label>
+            <span className='cakshar'>{order?.useremail}</span></div>
 
 
             </div>
@@ -81,26 +81,26 @@ export default function Page() {
 
 
         
-        <div className='m-4 w-4/6 p-4'>
+        <div className='algo'>
             <div className="flex flex-col justify-between shdw m-2 p-4 ">
 
               
 
             <span className='font-bold text-xl py-2'>Order Details:</span>
             
-            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 text-lg' htmlFor="ds">Order No.: </label>
-            <span className='text-lg' >{order?._id}</span></div>
+            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 cakshar' htmlFor="ds">Order No.: </label>
+            <span className='cakshar' >{order?._id}</span></div>
 
-            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 text-lg' htmlFor="ds">Total Price: </label>
-            <span className='text-lg'>Rs.{order?.totprice}/-</span></div>
+            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 cakshar' htmlFor="ds">Total Price: </label>
+            <span className='cakshar'>Rs.{order?.totprice}/-</span></div>
 
-            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 text-lg' htmlFor="ds">Payment Status: </label>
-            <span className='text-lg'>{((order?.paid)==true)?("paid"):("not paid")}</span></div>
+            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 cakshar' htmlFor="ds">Payment Status: </label>
+            <span className='cakshar'>{((order?.paid)==true)?("paid"):("not paid")}</span></div>
 
-            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 text-lg' htmlFor="ds">Date: </label>
-            <span className='text-lg'>{((order?.time)?.toString())?.slice(0,10)}</span></div>
-            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 text-lg' htmlFor="ds">Time: </label>
-            <span className='text-lg'>{((order?.time)?.toString())?.slice(11,19)}</span></div>
+            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 cakshar' htmlFor="ds">Date: </label>
+            <span className='cakshar'>{((order?.time)?.toString())?.slice(0,10)}</span></div>
+            <div className="flex items-center gap-2 px-6"><label className='m-0 p-0 cakshar' htmlFor="ds">Time: </label>
+            <span className='cakshar'>{((order?.time)?.toString())?.slice(11,19)}</span></div>
             
 
 
@@ -108,7 +108,7 @@ export default function Page() {
         </div>
 
 
-        <div className="m-4 w-4/6 p-4"><div className="flex m-2 p-4 shdw"> <span className='font-bold text-xl py-2 px-2'>Product Details:</span></div></div>
+        <div className="algo"><div className="flex m-2 p-4 shdw"> <span className='font-bold text-xl py-2 px-2'>Product Details:</span></div></div>
 
         
 
@@ -117,12 +117,12 @@ export default function Page() {
         {
             order?.line_items.map(each=>{
                 return(
-                    <div key={each.price_data.product_data.pid} className='m-4 w-4/6 p-4'>
-            <div className="flex shdw m-2 p-4">
-              <div className="flex w-1/4">
+                    <div key={each.price_data.product_data.pid} className='algo'>
+            <div className="flipflop">
+              <div className="flex ">
                 <img className='h-48 w-32' src={each.price_data.product_data.image} alt="" />
               </div>
-              <div className="w-3/4 flex flex-col justify-around font-sans text-lg">
+              <div className="w-3/4 flex px-2 flex-col justify-around font-sans text-lg">
                 <div className="flex">
                   <span className='font-bold text-xl'>{each.price_data.product_data.name}</span>
                 </div>
