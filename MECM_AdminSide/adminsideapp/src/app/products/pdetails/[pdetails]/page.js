@@ -24,13 +24,13 @@ function Page() {
     },[])
   return (
     <MyLayout>
-      <div className="flex flex-col justify-center items-center">
-          <div className="border-8 eborder-blue-900 p-2 shadow-xl "><img src={imgurl} alt="" className="rounded-lg h-36"/></div>
+      <div className="flex flex-col justify-center items-center ">
+          <div className="border-8 eborder-blue-900 p-2 shadow-xl "><img src={imgurl} alt="" className="rounded-lg h-64"/></div>
           <div className="flex-col my-6 cbg-green-900 rounded-lg shadow-2xl p-8"> 
-            <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-lg shadow-xl rlink cursor-pointer bg-white"> <span className='text-gray-600'>Product Name :</span>  {prdname}</div>
-            <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-lg shadow-xl rlink cursor-pointer bg-white"> <span className='text-gray-600'>Category : </span> {parentcatname}</div>
-            <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-lg shadow-xl rlink cursor-pointer bg-white"> <span className='text-gray-600'>Description : </span>{desc}</div>
-            <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-lg shadow-xl rlink cursor-pointer bg-white"> <span className='text-gray-600'>Price :</span> Rs.  {price} only </div>
+            <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-lg shadow-xl xlink cursor-pointer bg-white"> <span className='text-gray-600'>Product Name :</span>  {prdname}</div>
+            <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-lg shadow-xl xlink cursor-pointer bg-white"> <span className='text-gray-600'>Category : </span> {parentcatname}</div>
+            <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-lg shadow-xl xlink cursor-pointer bg-white "> <span className='text-gray-600 '>Description : </span>{desc}</div>
+            <div className="m-4 p-2 px-4 font-bold text-black text-lg rounded-lg shadow-xl xlink cursor-pointer bg-white"> <span className='text-gray-600'>Price :</span> Rs.  {price} only </div>
           </div>
         
         <div>

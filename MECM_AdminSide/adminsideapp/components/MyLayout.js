@@ -27,9 +27,9 @@ export default function MyLayout({children}) {
       
       
       return(
-        <div className=" flex min-h-screen cbg-blue-900 p-1 ">
+        <div className=" flex min-h-screen cbg-blue-900 p-8 ">
         <Nav/>
-        <div className="cbg-white flex-grow mt-2 mr-2 mb-2 text-black rounded-lg p-4 font-bold"><Pdetails/>{children}</div>
+        <div className="cbg-white flex-grow mt-2 mr-2 mb-2 text-black rounded-lg p-4  ml-10 font-bold"><Pdetails/>{children}</div>
         </div>
       )
     }

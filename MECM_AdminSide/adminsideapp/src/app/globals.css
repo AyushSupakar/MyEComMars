@@ -16,6 +16,28 @@
   }
 }
 
+.shdw{
+  border-color: white;
+  border-width: 4px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+	transition: 1s all;
+}
+
+.xshdw{
+  background-color: #bc69ff;
+  color: #ffffff;
+  border-color: #ffffff;
+  border-width: 4px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+	transition: 1s all;
+}
+.shdw:hover{
+  border-color: white;
+  border-width: 4px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.33);
+	transition: 1s all;
+}
+
 body{
 }
 
@@ -33,9 +55,9 @@ svg {
 }
 
 .abc{
-  margin: 1rem ;
-  padding-left: 1rem;
-  padding-top: 1rem;
+
+  @apply my-10;
+
 
 }
 .def{
@@ -46,6 +68,8 @@ svg {
 .xyz{
   display: flex;
   flex-direction: column;
+
+  @apply p-2;
  
 }
 .lmn{
@@ -98,8 +122,12 @@ label{
   @apply px-1 mt-2 text-white px-4 p-2 rounded-lg 
 }
 .rlink{
-  @apply text-xl
+  @apply text-xl px-4 py-1;
 }
+.xlink{
+  @apply text-xl px-4 py-1;
+}
+
 
 .plink{
   @apply rounded-full w-16 h-16 border-4 cborder-blue-900 p-1
@@ -170,6 +198,11 @@ tr{
 }
 td{ border-collapse:separate;}
 .cborder-blue-900{
+  border-color:  rgb(108, 108, 233);
+  @apply text-xl
+}
+
+.xborder-blue-900{
   border-color:  rgb(108, 108, 233);
   @apply text-xl
 }

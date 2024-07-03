@@ -2,46 +2,19 @@
 
 import axios from 'axios';
 import { Router } from 'next/router';
-
 import React, { useEffect, useRef, useState } from 'react';
 import Swal from 'sweetalert2';
+import ProductImage from './ProductImage';
 
 const CategoryForm = (props) => {
+    const [imgurl, setimgurl] = useState('');
     const [catname, setCat] = useState('');
     const [parentcatname, setparentCat] = useState('No Parent');
-    //const [touchstate, settouchstate] = useState(false);
-    //const [x, setx] = useState('');
-   // const [oldprop, setoldprop] = useState(props);
-   // const ref = useRef();
-    
+  
   
   if(props.mode=='edit'){ 
-    const {ecatname, esetCat, eparentcatname, esetparentCat} = props;
-    // const [catname, setCat] = useState(props.editcat.catname);
-    // const [parentcatname, setparentCat] = useState(props.editcat.parentcatname);
-    //const [touchstate, settouchstate] = useState(false);
-    //const [oldprop, setoldprop] = useState(props)
-    //console.log(touchstate);
+    const {ecatname, esetCat, eparentcatname, esetparentCat, eimgurl, esetimgurl} = props;
 
-    
-   
-  
-    // if(!touchstate){
-    //     setCat(props.editcat.catname);
-    //     setparentCat(props.editcat.parentcatname);
-    //     settouchstate(true);
-    // }
-  
-
-    //console.log(props.editcat);
-    //console.log(props.editcat.catname);
-    
-   // console.log(catname);
-   // console.log(parentcatname);
-    // function setParent(ev){
-    //     setparentCat(ev.target?.value);
-    //     console.log(ev.target.value);
-    // }
     
     function setcategory(ev){
        // settouchstate(true);
@@ -57,7 +30,7 @@ const CategoryForm = (props) => {
 
     async function cathandeledit(ev){
         ev.preventDefault();
-        const data = {ecatname, eparentcatname};
+        const data = {ecatname, eparentcatname, eimgurl};
         console.log(eparentcatname);
 
         console.log(data);
@@ -65,8 +38,7 @@ const CategoryForm = (props) => {
         console.log(res.data);
         props.getallcats();
         esetCat('');
-        esetparentCat('');
-        props.router.push('/categories');
+        esetimgurl('')  
         props.setmode('');
         Swal.fire({
             title: "Edit Saved!",
@@ -91,15 +63,19 @@ const CategoryForm = (props) => {
             <label htmlFor="" className='mx-2'>Parent Category</label>
             <select name="" id="" className='w-content p-1' onChange={setparentcategory} defaultValue={eparentcatname}> 
             <option key="0" value="No Parent" >No Parent</option>
-            {console.log(props.allcats?.length)}
-            {    
-            props.allcats.length>0 && props.allcats.map(eachcat=>{
-                return (<option key={eachcat._id} value={eachcat.catname} >{eachcat.catname}</option>)
-            })}
-           
+            <option key="1" value="Clothing" >Clothing</option>
+            <option key="2" value="Electronics" >Electronics</option>
+            <option key="3" value="Accessories" >Accessories</option>
+            <option key="4" value="Footwear" >Footwear</option>
+            <option key="5" value="Sports" >Sports</option>
+            <option key="6" value="Decoratives" >Decoratives</option>
             
             </select>
             </div>
+            <div className="mx-4"><label htmlFor="np-i">Product Images:</label>
+            <div className="mx-2"><ProductImage imgurl={eimgurl} setimgurl={esetimgurl}/></div>
+            
+</div>
             <div className='flex'>
                 <button className="btn-primary mx-2 px-4 py-1 " type='submit' >Save</button>
             </div>
@@ -123,7 +99,7 @@ else{
 
     async function cathandel(ev){
         ev.preventDefault();
-        const data = {catname, parentcatname};
+        const data = {catname, parentcatname, imgurl};
         
         console.log(data);
         const res =  await axios.post('/api/categories', data);
@@ -137,7 +113,7 @@ else{
         icon: "success"
       });
       setCat('');
-        setparentCat('No Parent');
+        setimgurl('');
         
      
     }
@@ -155,18 +131,23 @@ else{
                 <input type="text" placeholder='name of category' className='mx-2' value={catname} onChange={setcategory}/> 
             </div>
             <div className="">
-            <label htmlFor="" className='mx-2'>Parent Category</label>
-            <select name="" id="" className='w-content p-1' onChange={setParent} value={parentcatname}> 
-            <option id='nopar' value={"No Parent"} onChange={(ev)=>{setparentCat(ev.target?.value)}} selected>No Parent</option>
-            {console.log(props.allcats?.length)}
-            {    
-            props.allcats.length>0 && props.allcats.map(eachcat=>{
-                return (<option key={eachcat._id} value={eachcat.catname}>{eachcat.catname}</option>)
-            })}
-           
+             <label htmlFor="" className='mx-2'>Parent Category</label>
+            <select name="" id="" className='w-content p-1' onChange={setParent} defaultValue='No Parent'> 
+            <option key="0" value="No Parent" >No Parent</option>
+            <option key="1" value="Clothing" >Clothing</option>
+            <option key="2" value="Electronics" >Electronics</option>
+            <option key="3" value="Accessories" >Accessories</option>
+            <option key="4" value="Footwear" >Footwear</option>
+            <option key="5" value="Sports" >Sports</option>
+            <option key="6" value="Decoratives" >Decoratives</option>
             
             </select>
             </div>
+
+            <div className="mx-2"> <label htmlFor="np-i">Category Image: </label>
+              <ProductImage imgurl={imgurl} setimgurl={setimgurl} />
+</div>
+
             <div className='flex'>
                 <button className="btn-primary mx-2 px-4 py-1 " type='submit' >Save</button>
             </div>

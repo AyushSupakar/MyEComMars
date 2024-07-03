@@ -18,6 +18,7 @@ function Page() {
     const [mode, setmode] = useState('');
     const [editcat, seteditcat] = useState({});
     const [posted, setposted] = useState(false);
+    const [eimgurl, esetimgurl] = useState('');
     const [ecatname, esetCat] = useState('');
     const [eparentcatname, esetparentCat] = useState('');
     function getallcats(){
@@ -47,6 +48,7 @@ function Page() {
        esetCat(eachcat.catname);
        esetparentCat(eachcat.parentcatname);
         seteditcat(eachcat); 
+        esetimgurl(eachcat.imgurl); 
         
 
 
@@ -84,7 +86,7 @@ function Page() {
   return (
     <MyLayout>
 
-        <CategoryForm mode={mode} editcat={editcat} allcats={allcats} getallcats={getallcats} router={router} setposted={setposted} key={editcat._id} ecatname={ecatname} eparentcatname={eparentcatname} esetCat={esetCat} esetparentCat={esetparentCat} setmode={setmode}/>
+        <CategoryForm mode={mode} editcat={editcat} allcats={allcats} getallcats={getallcats} router={router} setposted={setposted} key={editcat._id} ecatname={ecatname} eparentcatname={eparentcatname} esetCat={esetCat} esetparentCat={esetparentCat} setmode={setmode} eimgurl={eimgurl} esetimgurl={esetimgurl}/>
 
 
         
@@ -93,8 +95,8 @@ function Page() {
           <table className="border-2 rounded-lg">
             <thead>
               <tr>
-                <td className="text-center text-center border-2 bs  " >Categories</td>
-                <td className="text-center text-center border-2 bs  " >Parent Categories</td>
+                <td className="text-center text-center border-2 bs  ">Categories</td>
+                <td className="text-center text-center border-2 bs  ">Parent Categories</td>
                 <td className="text-center text-center border-2 bs  ">Edit</td>
                 <td className="text-center text-center border-2 bs  ">Delete</td>
               </tr>

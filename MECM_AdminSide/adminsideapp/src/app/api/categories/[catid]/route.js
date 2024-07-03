@@ -10,7 +10,8 @@ export async function PUT(req, context){
     const filter = {"_id" : catid};
     const newcat = {
         "catname" : data.ecatname,
-        "parentcatname" : data.eparentcatname
+        "parentcatname" : data.eparentcatname,
+        "imgurl" : data.eimgurl
     }
     const updatedcat = await Category.findOneAndUpdate(filter, newcat);
     console.log(updatedcat)
